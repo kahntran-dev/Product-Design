@@ -1,0 +1,42 @@
+{% extends 'KahnBundle::layout.html.twig' %}
+
+{% block stylesheets %}
+    <script>
+        var assetImmage = '{{ asset('uploads/image/shirt3.png') }}';
+    </script>
+    <script src="{{ asset('uploads/js/product-design.js') }}"></script>
+    <script src="{{ asset('uploads/js/canvas-design.js') }}"></script>
+    <script src="{{ asset('uploads/js/drag.js') }}"></script>
+{% endblock %}
+
+{% block stylesheets_css %}
+    <link rel="stylesheet" href="{{ asset('uploads/css/product_design.css') }}">
+{% endblock %}
+
+{% block body %}
+    <p>Username: {{ username }}</p>
+    <p>Password: {{ password }}</p>
+
+    <br/>
+    <br/>
+    <p>Canvas:</p>
+    <br/>
+    <canvas id="myCanvas" width="500" height="500" style="border: 1px solid">
+        Your browser does not support canvas
+    </canvas>
+    <img id="canvas_img" src="{{ asset('uploads/image/shirt3.png') }}" style="display: none">
+    <img id="canvas_img_new" src="{{ asset('uploads/image/shirt3.png') }}" style="display: none">
+    <canvas id="demoCanvas101" width="500" height="500" style="border: 1px solid">
+        Your browser does not support canvas
+    </canvas>
+    <img id="icon_img" src="{{ asset('uploads/image/icon1.png') }}" style="display: none">
+    <canvas id="dragCanvas" width="400" height="300" style="border: 1px solid">
+        Your browser does not support canvas
+    </canvas>
+    <br>
+    <div style="position: relative">
+        <canvas id="canvas1" width="500" height="500" style="border: 1px solid black; position: absolute"></canvas>
+        <canvas id="canvas2" width="500" height="500" style="position: absolute"></canvas>
+        <canvas id="canvas3" width="500" height="500" style="position: absolute"></canvas>
+    </div>
+{% endblock %}

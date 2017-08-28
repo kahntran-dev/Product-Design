@@ -1,0 +1,7 @@
+kahn:
+    resource: "@KahnBundle/Resources/config/routing.yml"
+    prefix:   /new-page
+
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation

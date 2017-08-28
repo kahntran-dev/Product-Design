@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome {% block page_title %}to Kahn page !{% endblock %}</title>
+    {% block stylesheets_css %}{% endblock %}
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
+</head>
+<body>
+    <h1>Welcome {% block title %}to Kahn page !{% endblock %}</h1>
+    <br/>
+    <a href="{{ path('kahn_homepage') }}">Homepage</a><span> || </span>
+    <a href="{{ path('kahn_loginpage') }}">Login</a><span> || </span>
+    <a href="{{ path('kahn_canvaspage') }}">Canvas Page</a><br/>
+    <br/>
+    {% block body %}{% endblock %}
+    {% block javascripts %}{% endblock %}
+</body>
+{% block stylesheets %}{% endblock %}
+</html>

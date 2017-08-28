@@ -1,0 +1,19 @@
+kahn_homepage:
+    path:     /testing
+    defaults: { _controller: KahnBundle:Default:index }
+
+kahn_loginpage:
+    path:     /login
+    defaults: { _controller: KahnBundle:Default:login }
+
+kahn_mainpage:
+    path:     /main-page
+    defaults: { _controller: KahnBundle:Default:mainPage }
+
+kahn_todopage:
+    path:     /to-do-page
+    defaults: { _controller: KahnBundle:ToDoTask:new }
+
+kahn_canvaspage:
+    path:     /canvas-page
+    defaults: { _controller: KahnBundle:Default:designProduct }
