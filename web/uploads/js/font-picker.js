@@ -11,6 +11,9 @@ function SetFonts(fonts) {
                 .attr("data-font", fonts.items[i].family)
                 .text(fonts.items[i].family));
     }
+    $("#styleFont").select2({
+        placeholder: 'Choose your font'
+    });
 }
 
 var script = document.createElement('script');
@@ -20,9 +23,6 @@ document.head.appendChild(script);
 $(document).ready(function() {
     console.log($('#testFont').css('font-family'));
     console.log($('#testFont').css('font-size'));
-    $("#styleFont").select2({
-        placeholder: 'Choose your font'
-    });
 
     $("#styleFont").change(function () {
         // Load a Google font by name.
